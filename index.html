@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Verhindert, dass Suchmaschinen die Seite listen -->
+    <meta name="robots" content="noindex, nofollow"> 
+    <title>Weihnachtsmenü 2025</title>
+    
+    <style>
+        /* --- GRUNDDESIGN --- */
+        :root {
+            --color-bg: #1a0505;
+            --color-card-bg: #fdfbf7; /* Helles Pergament */
+            --color-gold: #c5a059; /* Etwas matteres Gold für bessere Lesbarkeit */
+            --color-red: #8b0000;
+            --color-text: #2c2c2c;
+            --color-paper-shadow: rgba(60, 40, 20, 0.1);
+        }
+
+        body {
+            background-color: var(--color-bg);
+            /* Subtiler radialer Verlauf */
+            background-image: radial-gradient(circle at 50% 50%, #2a0a0a 0%, #0f0202 100%);
+            color: var(--color-text);
+            /* Fallback auf System-Serifen-Schriften (DSGVO-sicher) */
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; 
+            margin: 0;
+            padding: 15px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        /* --- KARTE & LAYOUT --- */
+        .card-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            background: linear-gradient(45deg, #b8860b, #eec95e, #b8860b);
+            padding: 3px; 
+            border-radius: 4px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.7), 0 0 30px rgba(184, 134, 11, 0.15);
+            z-index: 10;
+        }
+
+        .card-inner-border {
+            background: var(--color-red);
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .card-content {
+            background-color: var(--color-card-bg);
+            /* CSS-basierte Papier-Struktur (keine externen Bilder) */
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.02) 10px, rgba(0,0,0,0.02) 20px);
+            padding: 50px 40px;
+            border-radius: 2px;
+            box-shadow: inset 0 0 60px var(--color-paper-shadow);
+            outline: 1px solid var(--color-gold);
+            outline-offset: -12px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Responsive Anpassung für Handys */
+        @media (max-width: 600px) {
+            .card-content {
+                padding: 30px 15px;
+            }
+            h1 { font-size: 2rem !important; }
+        }
+
+        /* --- TYPOGRAFIE --- */
+        h1 {
+            /* Elegante Systemschriftart für Überschriften */
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: var(--color-red);
+            font-size: 2.8rem;
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+        }
+
+        h2.subtitle {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: var(--color-gold);
+            font-size: 1.1rem;
+            margin-top: 5px;
+            margin-bottom: 30px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        h3.course-title {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: var(--color-red);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            margin-top: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Quiz Text */
+        .quiz-question-text {
+            color: #3e2723;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 25px 0;
+            line-height: 1.4;
+        }
+
+        .course-desc { font-size: 1.15rem; margin-bottom: 5px; font-weight: bold; color: #1a0505; margin-top: 5px;}
+        .course-detail { font-style: italic; color: #5d4037; font-size: 0.95rem; margin-top: 0; }
+        .mystery-text { color: var(--color-gold); font-family: 'Georgia', serif; font-size: 1.5rem; margin-top: 10px; opacity: 0.8; letter-spacing: 5px; }
+        
+        /* Dekorativer Trenner */
+        .divider { 
+            width: 80px; 
+            height: 3px; 
+            border-top: 1px solid var(--color-gold); 
+            border-bottom: 1px solid var(--color-gold); 
+            margin: 15px auto; 
+            opacity: 0.6;
+        }
+        
+        .stars { color: var(--color-gold); font-size: 1.5rem; margin-bottom: 10px; opacity: 0.8; }
+        .hidden { display: none !important; }
+
+        /* Animationen */
+        .fade-in { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Buttons allgemein */
+        button.main-btn {
+            background: transparent;
+            color: var(--color-red);
+            border: 1px solid var(--color-red);
+            padding: 12px 30px;
+            font-family: 'Georgia', serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 25px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+        button.main-btn:hover { 
+            background: var(--color-red); 
+            color: #fff; 
+            box-shadow: 0 4px 10px rgba(139, 0, 0, 0.2);
+        }
+
+        /* --- QUIZ STYLES --- */
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: rgba(255,255,255,0.7);
+            border: 1px solid #d4c5a0;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: left;
+            font-family: 'Palatino Linotype', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all 0.2s;
+            color: #2c2c2c; 
+            font-weight: 500;
+        }
+
+        .quiz-option:hover {
+            background: #fff;
+            border-color: var(--color-gold);
+            transform: translateX(2px);
+        }
+
+        .quiz-option.correct {
+            background-color: #e8f5e9 !important;
+            border-color: #2e7d32 !important;
+            color: #1b5e20 !important;
+        }
+
+        .quiz-option.wrong {
+            background-color: #ffebee !important;
+            border-color: #c62828 !important;
+            color: #b71c1c !important;
+        }
+        
+        .quiz-option.disabled {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* Icons SVG Styles */
+        .icon-svg {
+            width: 16px;
+            height: 16px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .next-btn-container {
+            margin-top: 20px;
+            min-height: 50px; 
+        }
+
+        /* --- UI STATUS --- */
+        .locked-status {
+            margin-top: 40px;
+            padding: 15px;
+            border: 1px solid rgba(184, 134, 11, 0.3);
+            background: rgba(255,255,255,0.5);
+            font-style: italic;
+            color: #6d4c41;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Diskreter Admin Link */
+        .admin-trigger {
+            position: fixed; 
+            bottom: 5px; 
+            right: 5px; 
+            font-size: 10px; 
+            color: rgba(255,255,255,0.15); 
+            cursor: pointer; 
+            z-index: 100;
+            padding: 5px;
+        }
+        .admin-trigger:hover { color: rgba(255,255,255,0.6); }
+
+        /* --- SCHNEEFALL (CSS ONLY) --- */
+        .snowflake { color: #fff; font-size: 1.2em; font-family: Arial, sans-serif; text-shadow: 0 0 2px rgba(0,0,0,0.3); position: fixed; top: -10%; z-index: 9999; animation: snowflakes-fall 12s linear infinite, snowflakes-shake 4s ease-in-out infinite; pointer-events: none; }
+        @keyframes snowflakes-fall { 0% { top: -10%; } 100% { top: 100%; } }
+        @keyframes snowflakes-shake { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(60px); } }
+        .snowflake:nth-of-type(1){left:1%;animation-delay:0s,0s}.snowflake:nth-of-type(2){left:10%;animation-delay:1s,1s}.snowflake:nth-of-type(3){left:20%;animation-delay:6s,.5s}.snowflake:nth-of-type(4){left:35%;animation-delay:4s,2s}.snowflake:nth-of-type(5){left:50%;animation-delay:2s,2s}.snowflake:nth-of-type(6){left:65%;animation-delay:8s,3s}.snowflake:nth-of-type(7){left:80%;animation-delay:3s,1s}.snowflake:nth-of-type(8){left:90%;animation-delay:5s,0s}
+    </style>
+</head>
+<body>
+
+    <!-- SCHNEEFALL -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+        <div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+    </div>
+
+    <div class="card-container">
+        <div class="card-inner-border">
+            <div class="card-content">
+                
+                <div class="stars">★</div>
+
+                <!-- 1. ANSICHT: TEASER (VERSCHLÜSSELT) -->
+                <div id="view-teaser" class="fade-in">
+                    <h1>Weihnachtsmenü</h1>
+                    <h2 class="subtitle">Ein kulinarisches Rätsel</h2>
+                    
+                    <div class="divider"></div>
+
+                    <!-- Gänge (Verschlüsselt) -->
+                    <div class="course">
+                        <h3 class="course-title">I. Der Luxus aus Fernost</h3>
+                        <p class="course-desc">Stark marmoriert und heiß geküsst</p>
+                        <p class="mystery-text">? ? ?</p>
+                    </div>
+                    <div class="course">
+                        <h3 class="course-title">II. Das schwarze Gold</h3>
+                        <p class="course-desc">Nussiges Temperament von der Halbinsel</p>
+                        <p class="mystery-text">? ? ?</p>
+                    </div>
+                    <div class="course">
+                        <h3 class="course-title">III. Der geflügelte Tanz</h3>
+                        <p class="course-desc">Zwei Vögel drehen ihre Runden</p>
+                        <p class="mystery-text">? ? ?</p>
+                    </div>
+                    <div class="course">
+                        <h3 class="course-title">IV. Das süße Geheimnis</h3>
+                        <p class="course-desc">Ein winterlicher Traum zum Schluss</p>
+                    </div>
+
+                    <!-- Datums-Sperre -->
+                    <div id="lock-container" class="locked-status">
+                        <div>
+                            <!-- SVG Lock Icon -->
+                            <svg class="icon-svg" style="width:20px; height:20px; margin:0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <strong>Noch verschlüsselt</strong>
+                        <span style="font-size: 0.85rem;">Das Quiz zur Freischaltung öffnet am <strong>26.12.2025</strong>.</span>
+                    </div>
+
+                    <div id="unlock-container" class="hidden" style="margin-top: 30px;">
+                        <button class="main-btn" onclick="startQuiz()">
+                            Menü entschlüsseln
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. ANSICHT: QUIZ -->
+                <div id="view-quiz" class="hidden fade-in">
+                    <h1>Weihnachts-Quiz</h1>
+                    <h2 class="subtitle">Nur für echte Kenner</h2>
+                    <div class="divider"></div>
+                    
+                    <div style="margin-top: 30px;">
+                        <p id="quiz-counter" style="color: var(--color-gold); font-weight: bold; font-size: 0.85rem; letter-spacing: 2px;">FRAGE 1 VON 4</p>
+                        
+                        <!-- Frage Text -->
+                        <div id="quiz-question" class="quiz-question-text">Frage lädt...</div>
+                        
+                        <!-- Antworten -->
+                        <div id="quiz-options" style="margin-top: 20px;"></div>
+
+                        <!-- Button Nächste Frage (Initial versteckt) -->
+                        <div id="next-btn-container" class="next-btn-container hidden">
+                            <button class="main-btn" onclick="nextQuestion()">
+                                Nächste Frage 
+                                <!-- SVG Arrow Right -->
+                                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. ANSICHT: MENÜ (ENTHÜLLT) -->
+                <div id="view-menu" class="hidden fade-in">
+                    <h1>Frohe Weihnachten</h1>
+                    <h2 class="subtitle">Das Festtagsmenü</h2>
+                    <div class="divider"></div>
+
+                    <div class="course">
+                        <h3 class="course-title">I. Der Auftakt</h3>
+                        <p class="course-desc">Full Blood Wagyu | Denver Cut</p>
+                        <p class="course-detail">Marbling Score 8-10 • Wildkräutersalat an Yuzu-Vinaigrette</p>
+                    </div>
+                    <div class="course">
+                        <h3 class="course-title">II. Das Zwischenspiel</h3>
+                        <p class="course-desc">Iberico Schweinekarree</p>
+                        <p class="course-detail">Sous Vide gegart & am Knochen gegrillt • Gebratene Pimientos de Padrón</p>
+                    </div>
+                    <div class="course">
+                        <h3 class="course-title">III. Das Festmahl</h3>
+                        <p class="course-desc">Zweierlei vom Drehspieß</p>
+                        <p class="course-detail">Barbarie Ente & Kikok Maishähnchen • Apfel-Rotkohl • Semmelknödel • Geflügeljus</p>
+                    </div>
+                    <div class="course">
+                        <h3 class="course-title">IV. Der süße Abschluss</h3>
+                        <p class="course-desc">Weihnachtliche Dessert-Variation</p>
+                        <p class="course-detail">Ein festlicher Ausklang</p>
+                    </div>
+
+                    <div style="margin-top: 50px; margin-bottom: 20px;">
+                        <p style="color: var(--color-red); font-weight: bold; font-size: 1.2rem; font-family:'Georgia', serif;">Guten Appetit!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Test Button (unauffällig) -->
+    <div class="admin-trigger" onclick="adminLogin()">π</div>
+
+    <script>
+        // --- KONFIGURATION ---
+        const RELEASE_DATE = new Date('2025-12-26T00:00:00');
+        let isAdminMode = false;
+
+        const questions = [
+            {
+                q: "Wir starten exklusiv: Was kostet das absolut teuerste Wagyu (Kobe) ca. pro Kilo?",
+                a: ["So viel wie ein Kleinwagen", "Ca. 400€ - 600€ (oder mehr!)", "9,99€ beim Discounter", "20€"],
+                correct: 1
+            },
+            {
+                q: "Das Iberico Schwein ist ein Feinschmecker. Was frisst es am liebsten?",
+                a: ["Trüffel & Goldstaub", "Mais & Soja", "Eicheln (Bellota)", "Kartoffelsalat"],
+                correct: 2
+            },
+            {
+                q: "Unser Kikok-Hähnchen ist auffällig gelb. Warum?",
+                a: ["Es hat zu viel Sonne gebadet", "Es wird mit Mais gefüttert", "Es wurde mit Safran lackiert", "Es ist ein Simpsons-Fan"],
+                correct: 1
+            },
+            {
+                q: "Wichtigste Frage: Zählt man an Weihnachten Kalorien?",
+                a: ["Natürlich, strengste Diät!", "Nur die vom Salat", "Auf gar keinen Fall!", "Die Waage lügt sowieso"],
+                correct: 2
+            }
+        ];
+
+        let currentQIndex = 0;
+        let isAnswered = false;
+
+        // NEU: Haupt-Initialisierung
+        function initApp() {
+            // Prüfen, ob schon gelöst
+            const isUnlocked = localStorage.getItem('menue_unlocked_2025');
+
+            if (isUnlocked === 'true') {
+                // Direkt zum Menü springen, Teaser & Quiz überspringen
+                document.getElementById('view-teaser').classList.add('hidden');
+                document.getElementById('view-quiz').classList.add('hidden');
+                document.getElementById('view-menu').classList.remove('hidden');
+            } else {
+                // Normaler Start: Datumsprüfung
+                checkDate();
+            }
+        }
+
+        function checkDate() {
+            const now = new Date();
+            if (now >= RELEASE_DATE || isAdminMode) {
+                document.getElementById('lock-container').classList.add('hidden');
+                document.getElementById('unlock-container').classList.remove('hidden');
+            }
+        }
+
+        function adminLogin() {
+            const pw = prompt("Admin Passwort:");
+            if (pw === "Letitsnow") {
+                isAdminMode = true;
+                checkDate();
+                console.log("Admin Modus aktiv");
+                
+                // Optional für dich zum Testen: Speicher löschen
+                if(confirm("Soll der 'Bereits gelöst'-Status zurückgesetzt werden?")) {
+                    localStorage.removeItem('menue_unlocked_2025');
+                    location.reload();
+                }
+            }
+        }
+
+        function startQuiz() {
+            document.getElementById('view-teaser').classList.add('hidden');
+            document.getElementById('view-quiz').classList.remove('hidden');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            isAnswered = false;
+            const qData = questions[currentQIndex];
+            
+            // UI Update
+            document.getElementById('quiz-counter').innerText = `FRAGE ${currentQIndex + 1} VON ${questions.length}`;
+            document.getElementById('quiz-question').innerText = qData.q;
+            document.getElementById('next-btn-container').classList.add('hidden');
+
+            const container = document.getElementById('quiz-options');
+            container.innerHTML = '';
+
+            qData.a.forEach((ans, idx) => {
+                const btn = document.createElement('div');
+                btn.className = 'quiz-option';
+                btn.innerText = ans;
+                btn.onclick = () => handleAnswer(idx, qData.correct, btn);
+                container.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(selectedIdx, correctIdx, btn) {
+            if (isAnswered) return;
+            
+            isAnswered = true;
+            const allBtns = document.querySelectorAll('.quiz-option');
+            const checkIcon = '<svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            
+            if (selectedIdx === correctIdx) {
+                // RICHTIG
+                btn.classList.add('correct');
+                btn.innerHTML += checkIcon;
+                allBtns.forEach(b => b.classList.add('disabled'));
+                document.getElementById('next-btn-container').classList.remove('hidden');
+            } else {
+                // FALSCH
+                btn.classList.add('wrong');
+                btn.innerText += " (Leider falsch!)";
+                isAnswered = false; 
+                setTimeout(() => {
+                    btn.classList.add('disabled'); 
+                }, 200);
+            }
+        }
+
+        function nextQuestion() {
+            currentQIndex++;
+            if (currentQIndex < questions.length) {
+                renderQuestion();
+            } else {
+                showRealMenu();
+            }
+        }
+
+        function showRealMenu() {
+            // NEU: Speichern, dass der Nutzer es geschafft hat
+            localStorage.setItem('menue_unlocked_2025', 'true');
+
+            // Sicherstellen, dass alles andere weg ist
+            document.getElementById('view-teaser').classList.add('hidden');
+            document.getElementById('view-quiz').classList.add('hidden');
+            
+            // Menü anzeigen
+            document.getElementById('view-menu').classList.remove('hidden');
+        }
+
+        // Startpunkt
+        initApp();
+    </script>
+</body>
+</html>
